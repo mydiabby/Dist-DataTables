@@ -2131,6 +2131,10 @@
 	 */
 	function _fnAdjustColumnSizing ( settings )
 	{
+		// not necessary when destroying
+		if(settings.bDestroying) {
+		    return;
+		}
 		/* Not interested in doing column width calculation if auto-width is disabled */
 		if ( settings.oFeatures.bAutoWidth !== false )
 		{
